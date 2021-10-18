@@ -43,6 +43,7 @@ std::string get_input_str_without_len_limit() {
       printf("%c", c);
 #endif
       if ('\n' == c || '\r' == c) {
+        printf("\n");
         break;
       }
       str += c;
