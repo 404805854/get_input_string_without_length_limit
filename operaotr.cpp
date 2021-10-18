@@ -37,7 +37,7 @@ std::string get_input_str_without_len_limit() {
       c = getchar();
 #elif defined(_WIN32)
       c = _getch();
-      if (c < 31) {
+      if (c < 31 && c != '\n' && c != '\r') {
         exit(-1);
       }
       printf("%c", c);
